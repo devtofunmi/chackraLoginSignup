@@ -34,7 +34,7 @@ const Profile = () => {
             <EditProfile />
           </Flex>
 
-          <Box width={"50%"} m="auto">
+          <Box width={"50%"} m="auto" marginTop={20}>
             <Text
               color="blue.500"
               fontSize={50}
@@ -58,6 +58,24 @@ const Profile = () => {
               fontFamily="sans-serif"
             >
               User Name:{userInfo.userName}
+            </Text>
+          </Box>
+          <Box marginTop={150}>
+            <Text
+              color="blue.500"
+              fontSize={25}
+              textAlign="center"
+              fontFamily="sans-serif"
+            >
+              Post Title:{userInfo.postTitle}
+            </Text>
+            <Text
+              color="blue.500"
+              fontSize={25}
+              textAlign="center"
+              fontFamily="sans-serif"
+            >
+              Post Title:{userInfo.postContent}
             </Text>
           </Box>
         </Box>
