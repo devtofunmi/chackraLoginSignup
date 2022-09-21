@@ -30,14 +30,6 @@ const Profile = () => {
             <Avatar>
               <AvatarBadge boxSize="1.25em" bg="green.500" />
             </Avatar>
-            <Button
-              backgroundColor="blue.500"
-              color="white"
-              ref={btnRef}
-              onClick={onOpen}
-            >
-              Edit Profile
-            </Button>
             <NewPostModal />
             <EditProfile />
           </Flex>
