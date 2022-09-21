@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useState, useRef } from "react";
 import {
   InputGroup,
   InputRightElement,
@@ -12,6 +12,8 @@ import {
   DrawerHeader,
   DrawerBody,
   DrawerFooter,
+  Button,
+  Input,
 } from "@chakra-ui/react";
 
 const EditProfile = () => {
@@ -22,7 +24,7 @@ const EditProfile = () => {
   const [userInfo, setUserInfo] = useState({});
   const [changeUserName, setChangeUsername] = useState("");
   const [changePassword, setChangePassword] = useState("");
-
+  const [loading, setLoading] = useState("");
   const [show, setShow] = useState(false);
 
   function handleForm() {
