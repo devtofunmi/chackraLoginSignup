@@ -63,6 +63,14 @@ const EditProfile = () => {
 
   return (
     <>
+      <Button
+        backgroundColor="blue.500"
+        color="white"
+        ref={btnRef}
+        onClick={onOpen}
+      >
+        Edit Profile
+      </Button>
       <Drawer
         isOpen={isOpen}
         placement="right"
