@@ -12,6 +12,26 @@ const Profile = () => {
 
   return (
     <>
+      <Text
+        color="blue.500"
+        fontSize={40}
+        textAlign="center"
+        fontFamily="sans-serif"
+      >
+        Profile
+      </Text>
+      <Flex
+        spacing={4}
+        marginTop={5}
+        justifyContent={"flex-end"}
+        gap={5}
+        mr={2}
+      >
+        <>
+          <NewPostModal />
+          <EditProfile />
+        </>
+      </Flex>
       <Flex
         align-items="center"
         justify-contents="center"
@@ -20,45 +40,30 @@ const Profile = () => {
         flexDirection="column"
       >
         <Box>
-          <Flex
-            spacing={4}
-            marginTop={5}
-            justifyContent={"flex-end"}
-            gap={5}
-            mr={2}
-          >
-            <Avatar>
-              <AvatarBadge boxSize="1.25em" bg="green.500" />
-            </Avatar>
-            <NewPostModal />
-            <EditProfile />
-          </Flex>
-
           <Box width={"50%"} m="auto" marginTop={20}>
-            <Text
-              color="blue.500"
-              fontSize={50}
-              textAlign="center"
-              fontFamily="sans-serif"
+            <Flex
+              justifyContent={"center"}
+              direction={"column"}
+              alignItems={"center"}
             >
-              Profile
-            </Text>
-            <Text
-              color="blue.500"
-              fontSize={25}
-              textAlign="center"
-              fontFamily="sans-serif"
-            >
-              Display Name:{userInfo.displayName}
-            </Text>
-            <Text
-              color="blue.500"
-              fontSize={25}
-              textAlign="center"
-              fontFamily="sans-serif"
-            >
-              User Name:{userInfo.userName}
-            </Text>
+              <Avatar size={"xl"}></Avatar>
+              <Text
+                color="blue.500"
+                fontSize={25}
+                textAlign="center"
+                fontFamily="sans-serif"
+              >
+                {userInfo.displayName}
+              </Text>
+              <Text
+                color="blue.500"
+                fontSize={25}
+                textAlign="center"
+                fontFamily="sans-serif"
+              >
+                {userInfo.userName}
+              </Text>
+            </Flex>
           </Box>
           <Box marginTop={150}>
             <Text
