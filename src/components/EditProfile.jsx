@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import {
   InputGroup,
   InputRightElement,
@@ -62,6 +62,10 @@ const EditProfile = () => {
       }
     }, 2000);
   }
+  useEffect(() => {
+    const userInfo = JSON.parse(localStorage.getItem("userInfo"));
+    setUserInfo(userInfo);
+  }, []);
 
   return (
     <>
