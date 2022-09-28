@@ -70,7 +70,7 @@ const Otp = () => {
               <PinInputField />
               </PinInput>
            </HStack>
-           <Button marginTop={30} backgroundColor='blue.500' color='white' onClick={handleSubmit} disabled={pin < 6 || subMit}>{subMit ? 
+           <Button marginTop={30} backgroundColor='blue.500' color='white' onClick={handleSubmit} disabled={pin < 6 || loading}>{ ? 
             
             <Spinner
                   thickness='4px'
